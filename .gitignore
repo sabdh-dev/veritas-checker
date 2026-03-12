@@ -1,0 +1,49 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor folders
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment / secrets (never commit these)
+.env
+.env.local
+*.key
+
+# Node (if you ever add a build step later)
+node_modules/
+dist/
+```
+
+The most important lines here are `.env` and `*.key` — these prevent you from accidentally committing any API keys or secrets if you ever expand the project later.
+
+---
+
+## Which license to pick?
+
+| License | Best for | Restriction |
+|---|---|---|
+| **MIT** | Most open, recommended | Must keep your copyright notice |
+| **Apache 2.0** | Larger projects | Same as MIT + patent protection |
+| **GPL v3** | If you want forks to stay open source | Forks must also be open source |
+| **No license** | Private / all rights reserved | Nobody can legally use your code |
+
+For a free public tool like Veritas, **MIT is the sweet spot** — simple, permissive, widely recognized.
+
+---
+
+## Your final repo structure should look like
+```
+veritas-checker/
+├── index.html       ← your app
+├── LICENSE          ← MIT license
+├── .gitignore       ← ignore rules
+└── README.md        ← auto-created by GitHub
